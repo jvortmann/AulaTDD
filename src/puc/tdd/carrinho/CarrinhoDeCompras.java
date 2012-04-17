@@ -13,4 +13,13 @@ public class CarrinhoDeCompras {
     public void adiciona(Item item) {
         itens.add(item);
     }
+
+    public Float total() {
+        Float price = 0f;
+        for (int i=0; i < itens.size(); i++) {
+            price += itens.get(i).price();
+        }
+
+        return price;
+    }
 }
