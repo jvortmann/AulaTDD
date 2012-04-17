@@ -21,12 +21,12 @@ public class CarrinhoDeCompras {
     }
 
     public Float total() {
-        Float price = 0f;
+        Float total = 0f;
         for (ItemDoCarrinho item : itens) {
-            price += item.preco();
+            total += item.preco();
         }
 
-        return price;
+        return total;
     }
 
     public Integer totalDeItens() {
