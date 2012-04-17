@@ -22,4 +22,10 @@ public class CarrinhoDeCompras {
 
         return price;
     }
+
+    public void adiciona(int quantidade, Item item) {
+        for (int i=0; i < quantidade; i++) {
+            adiciona(item);
+        }
+    }
 }
