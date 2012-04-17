@@ -16,7 +16,7 @@ public class CarrinhoDeComprasTest {
 
     @Test
     public void deveAdicionarItemAoCarrinho() {
-        Carne carne = new Carne();
+        Item carne = new Carne();
         carrinho.adiciona(carne);
 
         assertThat(carrinho.itens().size(), is(1));
@@ -26,8 +26,8 @@ public class CarrinhoDeComprasTest {
     @Test
     public void deveTerOTotalDosItensAdicionados() {
         carrinho.adiciona(new Carne());
-        carrinho.adiciona(new Carne());
+        carrinho.adiciona(new Cerveja());
 
-        assertThat(carrinho.total(), is(10f));
+        assertThat(carrinho.total(), is(6f));
     }
 }
