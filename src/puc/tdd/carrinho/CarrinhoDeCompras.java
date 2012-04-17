@@ -16,7 +16,7 @@ public class CarrinhoDeCompras {
     }
 
     public CarrinhoDeCompras adiciona(int quantidade, Item item) {
-        for (int i=0; i < quantidade; i++) {
+        for (int i = 0; i < quantidade; i++) {
             adiciona(item);
         }
 
