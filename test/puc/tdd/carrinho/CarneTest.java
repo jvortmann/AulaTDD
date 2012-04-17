@@ -5,9 +5,9 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class ItemTest {
+public class CarneTest {
     @Test
     public void deveCustar5Reais() {
-        assertThat(new Item().preco(), is(5f));
+        assertThat(new Carne().preco(), is(5f));
     }
 }

@@ -16,17 +16,17 @@ public class CarrinhoDeComprasTest {
 
     @Test
     public void deveAdicionarItemAoCarrinho() {
-        Item item = new Item();
-        carrinho.adiciona(item);
+        Carne carne = new Carne();
+        carrinho.adiciona(carne);
 
         assertThat(carrinho.itens().size(), is(1));
-        assertThat(carrinho.itens().get(0), is(item));
+        assertThat(carrinho.itens().get(0), is(carne));
     }
 
     @Test
     public void deveTerOTotalDosItensAdicionados() {
-        carrinho.adiciona(new Item());
-        carrinho.adiciona(new Item());
+        carrinho.adiciona(new Carne());
+        carrinho.adiciona(new Carne());
 
         assertThat(carrinho.total(), is(10f));
     }

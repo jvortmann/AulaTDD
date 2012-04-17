@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarrinhoDeCompras {
-    private List<Item> itens = new ArrayList<Item>();
+    private List<Carne> itens = new ArrayList<Carne>();
 
-    public List<Item> itens() {
+    public List<Carne> itens() {
        return itens;
     }
 
-    public void adiciona(Item item) {
+    public void adiciona(Carne item) {
         itens.add(item);
     }
 
     public Float total() {
         Float price = 0f;
-        for (Item item : itens) {
+        for (Carne item : itens) {
             price += item.preco();
         }
 
