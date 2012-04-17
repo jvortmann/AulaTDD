@@ -22,15 +22,15 @@ public class CarrinhoDeComprasTest {
     public void deveAdicionarItemAoCarrinho() {
         carrinho.adiciona(carne);
 
-        assertThat(carrinho.itens().size(), is(1));
-        assertThat(carrinho.itens().get(0), is((Item) carne));
+        assertThat(carrinho.totalDeItens(), is(1));
+        assertThat(carrinho.itens().get(0).item(), is((Item) carne));
     }
 
     @Test
     public void devePoderAdicionarQuantidadesEspecificasDeItens() {
         carrinho.adiciona(2, carne).adiciona(1, cerveja);
 
-        assertThat(carrinho.itens().size(), is(3));
+        assertThat(carrinho.totalDeItens(), is(3));
     }
 
     @Test

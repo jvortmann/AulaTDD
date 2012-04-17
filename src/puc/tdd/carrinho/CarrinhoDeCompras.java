@@ -4,31 +4,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarrinhoDeCompras {
-    private List<Item> itens = new ArrayList<Item>();
+    private List<ItemDoCarrinho> itens = new ArrayList<ItemDoCarrinho>();
 
-    public List<Item> itens() {
+    public List<ItemDoCarrinho> itens() {
        return itens;
     }
 
     public CarrinhoDeCompras adiciona(Item item) {
-        itens.add(item);
+        adiciona(1, item);
         return this;
     }
 
     public CarrinhoDeCompras adiciona(int quantidade, Item item) {
-        for (int i = 0; i < quantidade; i++) {
-            adiciona(item);
-        }
-
+        itens.add(new ItemDoCarrinho(quantidade, item));
         return this;
     }
 
     public Float total() {
         Float price = 0f;
-        for (Item item : itens) {
+        for (ItemDoCarrinho item : itens) {
             price += item.preco();
         }
 
         return price;
+    }
+
+    public Integer totalDeItens() {
+        Integer totalDeItens = 0;
+        for (ItemDoCarrinho item : itens) {
+            totalDeItens += item.quantidade();
+        }
+
+        return totalDeItens;
     }
 }
