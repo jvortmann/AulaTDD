@@ -8,6 +8,6 @@ import static org.junit.Assert.assertThat;
 public class ItemTest {
     @Test
     public void deveCustar5Reais() {
-        assertThat(new Item().price(), is(5f));
+        assertThat(new Item().preco(), is(5f));
     }
 }

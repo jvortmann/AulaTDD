@@ -16,8 +16,8 @@ public class CarrinhoDeCompras {
 
     public Float total() {
         Float price = 0f;
-        for (int i=0; i < itens.size(); i++) {
-            price += itens.get(i).price();
+        for (Item item : itens) {
+            price += item.preco();
         }
 
         return price;
