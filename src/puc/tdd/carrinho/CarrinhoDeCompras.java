@@ -10,8 +10,17 @@ public class CarrinhoDeCompras {
        return itens;
     }
 
-    public void adiciona(Item item) {
+    public CarrinhoDeCompras adiciona(Item item) {
         itens.add(item);
+        return this;
+    }
+
+    public CarrinhoDeCompras adiciona(int quantidade, Item item) {
+        for (int i=0; i < quantidade; i++) {
+            adiciona(item);
+        }
+
+        return this;
     }
 
     public Float total() {
@@ -21,11 +30,5 @@ public class CarrinhoDeCompras {
         }
 
         return price;
-    }
-
-    public void adiciona(int quantidade, Item item) {
-        for (int i=0; i < quantidade; i++) {
-            adiciona(item);
-        }
     }
 }
