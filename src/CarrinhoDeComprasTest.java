@@ -1,7 +1,5 @@
 import org.junit.Test;
 
-import java.awt.event.ItemEvent;
-
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
